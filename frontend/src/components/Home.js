@@ -1,6 +1,6 @@
 import {React} from "react";
 import "./Home.css";
-import Plot from 'react-plotly.js'
+// import Plot from 'react-plotly.js'
 
 
 function Home(onSearch) {
@@ -48,7 +48,7 @@ function Home(onSearch) {
 
       <div className="chart">
 
-      <Plot
+      {/* <Plot
         data={[
           {
             x: [1, 2, 3],
@@ -59,7 +59,7 @@ function Home(onSearch) {
           }
         ]}
         layout={ {width: 320, height: 240, title: 'A Fancy Plot'} }
-      />
+      /> */}
  
         </div>
     </div>
