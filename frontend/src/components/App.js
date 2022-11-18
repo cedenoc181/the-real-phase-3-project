@@ -23,7 +23,7 @@ const [searchKey, setSearchKey] = useState('');
     //   }
     // };
     
-    // fetch('https://seeking-alpha.p.rapidapi.com/news/v2/list-trending?until=0&since=0&size=20', options)
+    // fetch('https://api.polygon.io/v2/reference/news?apiKey=_2JqjW3Rs2UBY0ROqCFIN1v6Nbq6G_Ug', options)
     //   .then(response => response.json())
     //   .then(articlesData => {
     //     setArticles(articlesData)
@@ -80,6 +80,16 @@ const [searchKey, setSearchKey] = useState('');
 
 }, []);
 
+useEffect(() => {
+ 
+    // fetch('https://api.polygon.io/v2/reference/news?apiKey=_2JqjW3Rs2UBY0ROqCFIN1v6Nbq6G_Ug', options)
+    //   .then(response => response.json())
+    //   .then(articlesData => {
+    //     setArticles(articlesData)
+    //     console.log(articlesData)})
+    //   .catch(err => console.error(err));
+
+}, []);
 // useEffect(() => { 
 //   const options = {
 //     method: 'GET',
