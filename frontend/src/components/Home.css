@@ -1,0 +1,45 @@
+.Home {
+ background: black;
+}       
+
+.display-watch {
+    display: inline-block;
+    padding-right: 40px;
+    font-size: larger;
+    color: white;
+
+}
+
+.display-ownership {
+    display: inline-block;
+    font-size: larger;
+    color: white;
+
+}
+
+.footer {
+    display: flex;
+    margin-top: 450px;
+    justify-content: center;
+    justify-content: space-between;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.a-link {
+    border: solid 1px;
+    height: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 30px;
+}
+
+.list {
+    border: solid 1px;
+    margin-left: 20px;
+    margin-top: 150px;
+   width: 300px;
+   padding-left: 70px;
+   color: white;
+
+}

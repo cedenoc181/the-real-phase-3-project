@@ -1,0 +1,28 @@
+.Stocks {
+    background: black;
+   }  
+
+   .stock-card {
+    color: white;
+    border: solid 1px white;
+    margin-top: 30px;
+    width: 300PX;
+    height: 250px;
+
+   }
+   
+   .scroll {
+    display: flex;
+flex-flow: row wrap;
+justify-content: space-between;
+margin-top: 50px;
+   }
+
+   .title {
+    color: white;
+    top: 30px;
+    margin-top: 50px;
+    margin-left: 30px;
+    float:inline-start;
+    
+   }
