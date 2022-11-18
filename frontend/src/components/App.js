@@ -2,14 +2,14 @@ import { Routes, Route, Link } from "react-router-dom";
 import {useState, useEffect} from 'react';
 import Home from "./Home"
 import Stocks from "./Stocks"
-import News from "./News"
+// import News from "./News"
 import "./App.css"
 
 
 function App() {
 
   const [stocks, setStocks]= useState([]);
- const[articles, setArticles] = useState([]);
+//  const[articles, setArticles] = useState([]);
 const [searchKey, setSearchKey] = useState('');
 
 
@@ -148,7 +148,7 @@ function addToWatchList(stock) {
       <Routes>
         <Route path="/" element={<Home /> } />
          <Route path="/stocks" element={<Stocks stocks={filteredItemsFromSearch} onSearch={onSearch} addToWatchList={addToWatchList}/> } />
-        <Route path="/news" element={<News articles={articles}/>} />
+        {/* <Route path="/news" element={<News articles={articles}/>} /> */}
         {/* <Route path="/account" element={<Account />} /> */}
        {/* <Route path="nav" element={<GovTrades />} /> */}
         {/* {<Route path="nav" element={null} /> */} 
