@@ -1,8 +1,8 @@
 import React from 'react'
 // import NewsCard from "./NewsCard"
-import "./News.css"
+import "./Profile.css"
 
-function News() {
+function Profile() {
   return (
   
       <div className="news-container">
@@ -15,4 +15,4 @@ function News() {
   )
 }
 
-export default News
+export default Profile
