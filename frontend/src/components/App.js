@@ -2,7 +2,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import {useState, useEffect} from 'react';
 import Home from "./Home"
 import Stocks from "./Stocks"
-// import News from "./News"
+import Profile from "./Profile"
 import "./App.css"
 
 
@@ -125,10 +125,20 @@ const filteredItemsFromSearch = stocks.filter((stock) => {
 });
 // console.log(filteredItemsFromSearch)
 
-function addToWatchList(stock) {
+function addToWatchList(company) {
   // fetch post request with stock.whatever info you want to save
   // fetch to """
-}
+  fetch(`http://localhost:9292/${company.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },    
+            body: JSON.stringify({
+              "id": 1,
+              "company": company
+})
+})
 
   return (
     <div className="App">
@@ -143,34 +153,22 @@ function addToWatchList(stock) {
         </Link>
 
         <Link className="link" to="/News">
-         News
+         Profile
         </Link>
 
-        {/* <Link className="link" to="/Account">
-          Account
-        </Link> */}
-
-        {/* <Link className="Link" to="/GovTrades">
-          Gov Trades
-        </Link> */}
         
       </nav>
       <Routes>
         <Route path="/" element={<Home /> } />
-         <Route path="/stocks" element={<Stocks stocks={filteredItemsFromSearch} onSearch={onSearch} addToWatchList={addToWatchList}/> } />
-        {/* <Route path="/news" element={<News articles={articles}/>} /> */}
-        {/* <Route path="/account" element={<Account />} /> */}
-       {/* <Route path="nav" element={<GovTrades />} /> */}
-        {/* {<Route path="nav" element={null} /> */} 
+        <Route path="/stocks" element={<Stocks stocks={filteredItemsFromSearch} onSearch={onSearch} /> } />
+        <Route path="/profile" element={<Profile  addToWatchList={addToWatchList}/>} />
+
       </Routes>
 
-      {/* stocks={stocks} */}
 
       </div>
 
    
-
-
 
 
   );
