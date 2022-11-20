@@ -13,9 +13,9 @@ function StocksCard({stock, addToWatchList}) {
       <p>{stock.symbol}</p>
       <p>{stock.price}</p>
       <p>{stock.sector}</p>
-      <p>{stock.companyName}</p>
+      <p>{stock.name}</p>
       <p>market cap: ${stock.marketCap}</p>
-      <p>{stock.exchange}</p>
+      <p>{stock.exchangeShortName}</p>
       <button onClick={handleClick}>Add to watchlist</button>
     </div>
     </>
